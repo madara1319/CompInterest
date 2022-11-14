@@ -11,7 +11,12 @@ int main()
  // ‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐
  cout << "Enter the initial amount to invest: " << endl;
  double C_0 {}; // Initial amount
- cin >> C_0;
+		
+ if(! (cin >>C_0))
+ {
+	 cout << "Error entering a value \n" << endl;
+	 return -1;
+ }
 
  if(C_0 <= 0.0 )
  {
@@ -21,7 +26,13 @@ int main()
 // ‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐
  cout << "Enter the annual rate [% per 12 months]: " << endl;
  double r {};
- cin >> r;
+ if(! (cin >>r))
+ {
+	 cout << "Error entering a value \n" << endl;
+	 return -1;
+ }
+
+
  if( r <= 0.0 || r >= 100.0 )
  {
  cout << "Wrong value, exiting..." << endl;
@@ -34,7 +45,13 @@ int main()
  cout << "If you don’t know, enter 12 for a yearly compound frequency." << endl;
  cout << "Enter the compound frequency [months 1‐72]: " << endl;
  double t {};
- cin >> t;
+
+ if(! (cin >>t))
+ {
+	 cout << "Error entering a value \n" << endl;
+	 return -1;
+ }
+
  if( t <= 0.0 || t > 72.0 )
  {
  cout << "Wrong value, exiting..." << endl;
@@ -44,7 +61,14 @@ int main()
  // ‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐
  cout << "Enter the investment time [months 1-100]: " << endl;
  double m {};
- cin >> m;
+
+ if(! (cin >>m))
+ {
+	 cout << "Error entering a value \n" << endl;
+	 return -1;
+ }
+
+
  if( m <= 0.0 || m >= 100 )
  {
  cout << "Wrong value, exiting..." << endl;
